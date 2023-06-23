@@ -1,0 +1,89 @@
+/* Master style */
+body{
+    margin: 0 px;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.navWrapper{
+    display:flex;
+    justify-content: space-between;
+    padding: 38px;
+
+}
+.leftSide{
+    display: flex;
+
+}
+.navWrapper > .leftSide > div{
+    margin-right: 20px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+.navLinkWrapper{
+    height: 22px;
+    border-bottom:transparent;
+    transition: border-bottom 0.5s;
+}
+.navLinkWrapper a{
+    color: #000000;
+    text-decoration: none;
+}
+
+
+/* Portfolio Styles*/
+
+.portfolioItemsWrapper{
+    display: grid;
+    grid-template-columns: max-content max-content max-content;
+
+}
+
+.portfolioItemWrapper{
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+.portfolioImgBackground{
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.imgTextWrapper{
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+}
+
+.imgTextWrapper .subtitle {
+    transition: 0.2s;
+    font-weight: 600;
+    color: rgb(44, 32, 0);
+    opacity: 70%;
+}
+.imgTextWrapper:hover .subtitle {
+    opacity: 100%;    
+}
+.imgDarken{
+    transition: 0.5s;
+    filter: brightness(5%);
+}
+/* About Page */
+.twoColumnWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.profileImageWrapper img{
+    size: 70px;
+}
