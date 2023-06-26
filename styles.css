@@ -1,33 +1,37 @@
 /* Master style */
-body{
+body {
     margin: 0 px;
 }
-.container{
+
+.container {
     display: grid;
     grid-template-columns: 1fr;
 }
 
-.navWrapper{
-    display:flex;
+.navWrapper {
+    display: flex;
     justify-content: space-between;
     padding: 38px;
 
 }
-.leftSide{
-    display: flex;
 
+.leftSide {
+    display: flex;
 }
-.navWrapper > .leftSide > div{
+
+.navWrapper>.leftSide>div {
     margin-right: 20px;
     font-size: 0.9em;
     text-transform: uppercase;
 }
-.navLinkWrapper{
+
+.navLinkWrapper {
     height: 22px;
-    border-bottom:transparent;
+    border-bottom: transparent;
     transition: border-bottom 0.5s;
 }
-.navLinkWrapper a{
+
+.navLinkWrapper a {
     color: #000000;
     text-decoration: none;
 }
@@ -35,25 +39,27 @@ body{
 
 /* Portfolio Styles*/
 
-.portfolioItemsWrapper{
+.portfolioItemsWrapper {
     display: grid;
     grid-template-columns: max-content max-content max-content;
 
 }
 
-.portfolioItemWrapper{
+.portfolioItemWrapper {
     position: relative;
     width: 200px;
     height: 200px;
 }
-.portfolioImgBackground{
+
+.portfolioImgBackground {
     width: 200px;
     height: 200px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-.imgTextWrapper{
+
+.imgTextWrapper {
     position: absolute;
     top: 0;
     display: flex;
@@ -72,18 +78,61 @@ body{
     color: rgb(44, 32, 0);
     opacity: 70%;
 }
+
 .imgTextWrapper:hover .subtitle {
-    opacity: 100%;    
+    opacity: 100%;
 }
-.imgDarken{
+
+.imgDarken {
     transition: 0.5s;
     filter: brightness(5%);
 }
+
 /* About Page */
 .twoColumnWrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: max-content 300px;
 }
-.profileImageWrapper img{
+
+.profileImageWrapper {
+    width: 525px;
+    overflow: hidden;
+}
+
+.profileImageWrapper img {
     size: 70px;
+}
+
+@media (max-width: 860px) {
+    .twoColumnWrapper {
+        display: inline;
+    }
+
+    .profileImageWrapper {
+        width: 20%;
+    }
+
+    .profileImageWrapper img {
+        width: 100%;
+    }
+    .profileContentWrapper {
+        width: 95vw;
+    }
+}
+.profileContentWrapper {
+    width: 1fr;
+}
+
+
+.ResumeFrame {
+    width: 90vw;
+    height: 126.86747vw;
+
+}
+
+@media (min-width: 830px) {
+    .ResumeFrame {
+        width: 830px;
+        height: 1170px;
+    }
 }
